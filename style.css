@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Tambahkan ini untuk mobile */
+}
+
+.header {
+    background: #2c3e50;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #3498db;
+}
+
+.header p {
+    font-size: 1em;
+    opacity: 0.9;
+}
+
+.form-container {
+    padding: 40px;
+    flex: 1;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px; /* Penting untuk mencegah zoom di iOS */
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.error {
+    background: #ffeaa7;
+    border-left-color: #fdcb6e;
+    color: #2d3436;
+}
+
+/* FOOTER RATA TENGAH */
+.simple-footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    width: 100%;
+}
+
+.simple-footer p {
+    margin: 0;
+    color: #bdc3c7;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 30px 20px;
+    }
+    
+    .header {
+        padding: 25px 20px;
+    }
+    
+    .header h1 {
+        font-size: 1.8em;
+    }
+    
+    .header h2 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        border-radius: 10px; /* Kurangi radius di mobile */
+    }
+    
+    .form-container {
+        padding: 20px 15px;
+    }
+    
+    .header {
+        padding: 20px 15px;
+    }
+    
+    .header h1 {
+        font-size: 1.5em;
+        margin-bottom: 8px;
+    }
+    
+    .header h2 {
+        font-size: 1.1em;
+        margin-bottom: 8px;
+    }
+    
+    .input-group {
+        margin-bottom: 20px;
+    }
+    
+    .input-group input {
+        padding: 12px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+    }
+    
+    .simple-footer {
+        padding: 15px;
+    }
+    
+    .simple-footer p {
+        font-size: 0.8em;
+    }
+}
+
+/* Tambahan untuk touch devices */
+@media (hover: none) {
+    .btn:hover {
+        transform: none; /* Nonaktifkan hover effect di touch devices */
+    }
+}

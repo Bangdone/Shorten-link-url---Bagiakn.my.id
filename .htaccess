@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirect semua request ke redirect.php kecuali file yang benar-benar ada
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ redirect.php [QSA,L]
